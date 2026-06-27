@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Intro a CSS</title>
+    <link rel="stylesheet" href="css/main_style.css" />
+    <!-- <style>
+        p {
+            color:blue;
+        }
+    </style>
+    -->
+</head>
+
+<body>
+    <header>
+        <section class="brand-section">
+            <img src="https://picsum.photos/id/4/72/72"
+                alt="brand-img" />
+            <h1>
+                Cascade Style Sheets
+                <span> Hoja de Estilos en Cascada</span>
+            </h1>
+        </section>
+        <nav>
+            <ul>
+                <li><a href="">Hero Panel</a></li>
+                <li><a href="">Half Panel</a></li>
+                <li><a href="">Cards List</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero-panel">
+            <section class="hero-background">
+                <picture>
+                    <source srcset="https://picsum.photos/id/20/1300/720"
+                       media="(min-width:1025px)" />
+                    <source srcset="https://picsum.photos/id/20/1025/640"
+                       media="(min-width:700px)" />
+                    <img src="https://picsum.photos/id/20/480/480"
+                        alt="Hero Panel Main Picture" />
+                </picture>
+            </section>
+            <section class="hero-call-to-action q4">
+                <h2>Una muestra de un CTA</h2>
+                <a href="#" class="btn-cta">Crear Cuenta</a>
+            </section>
+        </section>
+        <section class="content">
+            <section class="cards-holder grid">
+                <div class="row">
+                    <div class="col-12 col-m-6 col-l-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <img src="https://picsum.photos/id/151/280/200" alt="card 1" />
+                                <div class="card-header-label">Card 1 abc</div>
+                            </div>
+                            <div class="card-body">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Error, temporibus commodi.</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="card-footer-price">
+                                    L100.00
+                                </div>
+                                <div class="card-footer-cta">
+                                    <a href="#">Comprar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-m-6 col-l-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <img src="https://picsum.photos/id/151/280/200" alt="card 1" />
+                                <div class="card-header-label">Card 1 abc</div>
+                            </div>
+                            <div class="card-body">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Error, temporibus commodi.</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="card-footer-price">
+                                    L100.00
+                                </div>
+                                <div class="card-footer-cta">
+                                    <a href="#">Comprar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-m-6 offset-m-3 col-l-4 offset-l-0">
+                        <div class="card">
+                            <div class="card-header">
+                                <img src="https://picsum.photos/id/151/280/200" alt="card 1" />
+                                <div class="card-header-label">Card 1 abc</div>
+                            </div>
+                            <div class="card-body">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Error, temporibus commodi.</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="card-footer-price">
+                                    L100.00
+                                </div>
+                                <div class="card-footer-cta">
+                                    <a href="#">Comprar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="grid">
+                <div class="row">
+                    <div class="col-1">1</div>
+                    <div class="col-1">1</div>
+                    <div class="col-1">1</div>
+                    <div class="col-1">1</div>
+                    <div class="col-1">1</div>
+                    <div class="col-1">1</div>
+                    <div class="col-1">1</div>
+                    <div class="col-1">1</div>
+                    <div class="col-1">1</div>
+                    <div class="col-1">1</div>
+                    <div class="col-1">1</div>
+                    <div class="col-1">1</div>
+                </div>
+                <div class="row">
+                    <div class="col-2">2</div>
+                    <div class="col-2">2</div>
+                    <div class="col-2">2</div>
+                    <div class="col-2">2</div>
+                    <div class="col-2">2</div>
+                    <div class="col-2">2</div>
+                </div>
+                <div class="row">
+                    <div class="col-3">Columna A</div>
+                    <div class="col-9">Columna B</div>
+                </div>
+                <div class="row">
+                    <div class="col-6 offset-3"> Formulario media pantalla</div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-m-6 col-l-4">
+                        Esto es responsive 1
+                    </div>
+                    <div class="col-12 col-m-6 col-l-4">
+                        Esto es responsive 2
+                    </div>
+                    <div class="col-12 col-m-6 col-l-4">
+                        Esto es responsive 3
+                    </div>
+                </div>
+            </section>
+
+            <!-- <p style="color:#ff0000;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis neque laboriosam ut nobis quae nesciunt aperiam repellat temporibus sit tenetur dolorem reprehenderit nisi ab delectus, debitis consequuntur laudantium unde quibusdam.</p> -->
+            <section>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos voluptatum dolorum quia soluta
+                    dolorem maxime nostrum iure delectus iusto nam ex iste reprehenderit, molestias accusamus autem,
+                    quaerat
+                    voluptatem consequatur eum.
+                </p>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore nam excepturi accusamus
+                    consectetur
+                    quaerat totam corporis, error, nulla molestias sequi magnam deserunt possimus soluta deleniti, illum
+                    non
+                    porro quam accusantium?
+                </p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis natus nisi explicabo similique
+                    delectus, qui molestias eos pariatur saepe placeat distinctio autem nihil? Repudiandae veniam fuga
+                    assumenda aliquam minima non!
+                </p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis natus nisi explicabo similique
+                    delectus, qui molestias eos pariatur saepe placeat distinctio autem nihil? Repudiandae veniam fuga
+                    assumenda aliquam minima non!
+                </p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis natus nisi explicabo similique
+                    delectus, qui molestias eos pariatur saepe placeat distinctio autem nihil? Repudiandae veniam fuga
+                    assumenda aliquam minima non!
+                </p>
+            </section>
+        </section>
+    </main>
+    <footer>
+        Copyright 2026 &copy; ICC SCJ UNICAH
+    </footer>
+</body>
+
+</html>

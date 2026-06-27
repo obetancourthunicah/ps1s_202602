@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Primer Html PW1 Sabados</title>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <header>
+            <h1 id="inicio">Estructuras de HTML</h1>
+            <nav>
+                <ul>
+                    <li><a href="#intro">Introduccion</a></li>
+                    <li><a href="#tabla">Tablas</a></li>
+                    <li><a href="#links">Hipervínculos</a></li>
+                </ul>
+            </nav>
+
+        </header>
+        <main>
+            <h2 id="intro">Introducción</h2>
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam sequi impedit
+            commodi perspiciatis incidunt magni rem at dolorum voluptatibus, error beatae aut
+            ipsa cupiditate sit facere libero fugiat molestiae ex?
+            </p>
+            <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis alias corrupti
+            vero commodi recusandae accusantium officiis neque placeat ad nulla, consectetur,
+            aperiam voluptas necessitatibus, nobis unde officia tenetur illum suscipit.
+            </p>
+            <p>
+                Orlando Betancourth<br/>
+                obetancourthunicah@gmail.com<br/>
+                0000-0000
+            </p>
+            <br/>
+            <a href="#inicio">Ir a inicio</a>
+            <h2>HTML Esqueleto</h2>
+        
+            <h2>Encabezados</h2>
+            
+            <h2>Párrafos</h2>
+                <h3>Párrafo simple</h3>
+                <h3>Cortes de Linea</h3>
+            
+            <h2>Listas</h2>
+                <h3>Listas NO Ordenadas (un ordered Lists)</h3>
+                <ul>
+                    <li>Carne Res</li>
+                    <li>Pasta</li>
+                    <li>Tortillas</li >
+                    <li>Frituras | Churros</li>
+                    <li>Chicharranes</li>
+                    <li>Sodas</li>
+                </ul>
+
+                <h3>Listas Ordenadas (ordered lists)</h3>
+                <ol>
+                    <li>cocer la pasta</li>
+                     <li>cocer el pollo</li>
+                     <li>elaborar la salsa</li>
+                     <li>armar la lasagna capa pasta, pollo desmenusado, salsa y repertir hasta agotar</li>
+                     <li>hornear la lasagna</li>
+                     <li>servir</li>
+                     <li>disfrutar</li>
+                </ol>
+        
+            <h2 id="tabla">Tablas</h2>
+            <table border="1">
+                <tr>
+                    <th>#</th>
+                    <th>Región</th>
+                    <th>Ciudad</th>
+                    <th>Sucursal</th>
+                    <th>Q1</th>
+                    <th>Q2</th>
+                    <th>Q3</th>
+                    <th>Q4</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Norte</td>
+                    <td>San Pedro Sula</td>
+                    <td>Tienda 1</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>3</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Norte</td>
+                    <td>San Pedro Sula</td>
+                    <td>Tienda 2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>5</td>
+                </tr>
+                 <tr>
+                    <th>3</th>
+                    <th>Norte</th>
+                    <th>San Pedro Sula</th>
+                    <th>Tienda 3</th>
+                    <th>9</th>
+                    <th>10</th>
+                    <th>9</th>
+                    <th>15</th>
+                </tr>
+            </table>
+            <hr/>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th colspan="8">Resultados de Ventas por Región 2026</th>
+                    </tr>
+                    <tr>
+                        <th>#</th>
+                        <th>Región</th>
+                        <th>Ciudad</th>
+                        <th>Sucursal</th>
+                        <th>Q1</th>
+                        <th>Q2</th>
+                        <th>Q3</th>
+                        <th>Q4</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td rowspan="3">Norte</td>
+                        <td rowspan="3">San Pedro Sula</td>
+                        <td>Tienda 1</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>3</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Tienda 2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>2</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <th>Tienda 3</th>
+                        <th>9</th>
+                        <th>10</th>
+                        <th>9</th>
+                        <th>15</th>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="4">Total</th>
+                        <th>16</th>
+                        <th>19</th>
+                        <th>14</th>
+                        <th>27</th>
+                    </tr>
+                </tfoot>
+            </table>
+            <br/>
+            <a href="#inicio">Ir a inicio</a>
+
+            <h2>Imagenes</h2>
+                <h3>Mapas de Bits</h3>
+                    <h4>Optimizaciones</h4>
+                    <h4>Lorem Picsum</h4>
+            <img src="media/perfilFotoOptimizada.jpg"
+                alt="Foto de Perfil de FUlano de Tal"/>
+
+            <picture>
+                <source srcset="https://picsum.photos/id/72/1300/720"
+                    media="(min-width:1025px)" />
+                <source srcset="https://picsum.photos/id/92/1024/640"
+                    media="(min-width:720px)" />
+                <img src="https://picsum.photos/id/102/480/480"
+                    alt="Scouts Inivitando al Evento" />
+            </picture>
+            <section>
+                <h2 id="links">Hipervínculos</h2>
+                <h3>Relativos</h3>
+                <p>Las urls relativas son paths a los
+                     recursos a partir del recurso origen</p>
+
+                <a href="productos/controlados/morfina.html">Ir a Morfina</a>
+                <h3>Url Absolutas</h3>
+                <a target="_blank" href="https://www.unicah.edu/paginas/contactanos.html"></a>
+                <br/>
+                <a href="#inicio">Ir a inicio</a>
+            </section>
+            <section id="formulario">
+                <form action="index.html" method="GET">
+                    <label for="nombreTextBox">Nombre Completo</label>
+                    <input 
+                        name="txtNombre"
+                        type="text"
+                        id="nombreTextBox"
+                        placeholder="Nombre Completo"
+                     />
+                     <br/>
+                    <label for="txtEmail">Correo Electrónico</label>
+                    <input 
+                        name="txtEmail"
+                        type="email"
+                        id="txtEmail"
+                        placeholder="tucorre@electro.nico"
+                     />
+                     <br/>
+                     <label for="txtPassword">Contraseña</label>
+                    <input 
+                        name="txtPassword"
+                        type="password"
+                        id="txtPassword"
+                        placeholder="8 min, 1 Mayus, 1 Minus, 1 Special"
+                     />
+                     <br/>
+                     <fieldset>
+                        <legend>Plan</legend>
+                        <label>
+                            <input type="radio" name="rdbPlan" value="free"/>
+                            Free
+                        </label>
+                        &nbsp;
+                        <label>
+                            <input type="radio" name="rdbPlan" value="pro"/>
+                            Pro
+                        </label>
+                        &nbsp;
+                        <label>
+                            <input type="radio" checked name="rdbPlan" value="enterprise"/>
+                            Enterprise
+                        </label>
+                     </fieldset>
+                     <br/>
+                     <label for="cmbPais">País</label>
+                     <select name="cmbPais" id="cmbPais">
+                        <option value="hn">Honduras</option>
+                        <option value="gt">Guatemala</option>
+                        <option value="es" selected>El Salvador</option>
+                        <option value="ni">Nicaragua</option>
+                        <option value="ct">Costa Rica</option>
+                     </select>
+                     <br/>
+                     <label for="txtBio">Bio</label>
+                     <textarea id="txtBio"
+                        name="txtBio"
+                        placeholder="Escriba su Bio"
+                     ></textarea>
+                     <button type="submit" name="btnEnviar">Enviar</button>
+                     
+                </form>
+            </section>
+        </main>
+        <article>
+            
+        </article>
+        <aside>
+
+        </aside>
+        <footer>
+            <p>Todos los derechos Reservado 2026 &copy;</p>
+        </footer>
+    </body>
+</html>
+
+
