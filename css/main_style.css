@@ -311,7 +311,9 @@ Es el panel principal ubicado
     .grid .row .offset-l-11 {margin-left: calc(100%/12 * 11);}
     .grid .row .offset-l-12 {margin-left: 100%;}
 }
-
+form {
+    padding:0.5rem;
+}
 input {
  font-size: 1rem;
  padding: 0.7rem 0.5rem;
@@ -390,4 +392,79 @@ button.secondary {
     font-size: 2rem;
     background-color: #b9881f;
     color:#333;
+}
+@media (min-width:1025px){
+    .cta_content {
+        justify-content: end;
+    }
+}
+
+.bg-blocker{
+    position:fixed;
+    width:100vw;
+    height:100vh;
+    left:0px;
+    top:0px;
+    background-color: #000000e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-blocker .circle-loader {
+    display:block;
+    width:120px;
+    height:120px;
+    border:8px solid #fff;
+    border-radius: 50%;
+    border-top-right-radius: 0px;
+    border-right: 8px dotted #159b00;
+    transform: translateY(-100%) rotate(-45deg);
+    /* animation:
+        circle-turn ease 2s infinite; */
+    animation:
+        circle-drop linear 3s infinite;
+}
+.bg-blocker .circle-loader-inside {
+    display:block;
+    width:60px;
+    height:60px;
+    border:8px solid #fff;
+    border-radius: 50%;
+    border-left: 8px dotted #159b00;
+    animation:
+        circle-turn ease 2s infinite;
+}
+
+@keyframes circle-drop {
+    0%{
+        transform: translateY(-100%) rotate(-45deg);
+    }
+    25% {
+        transform: translateY(0%) rotate(-45deg);
+    }
+    50% {
+        transform: translateY(100%) rotate(-45deg);
+    }
+    55% {
+        transform: translateY(100%) rotate(-225deg);
+    }
+    75% {
+        transform: translateY(0%) rotate(-225deg);
+    }
+    95% {
+        transform: translateY(-100%) rotate(-225deg);
+    }
+    100%{
+        transform: translateY(-100%) rotate(-45deg);
+    }
+}
+
+@keyframes circle-turn {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
