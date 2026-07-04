@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 * {
     box-sizing: border-box;
 }
@@ -11,6 +12,7 @@ body {
     padding:0px;
     margin:0px;
     min-height:100vh;
+    font-family: "Roboto", Arial, sans-serif;
 }
 
 header, footer {
@@ -222,7 +224,7 @@ Es el panel principal ubicado
 
 .grid .row [class*=col-]{
     flex: 0 0;
-    border:solid 1px #000;
+    /* border:solid 1px #000; */
 }
 
 .grid .row .col-1 {flex-basis: calc(100%/12 * 1);}
@@ -308,4 +310,84 @@ Es el panel principal ubicado
     .grid .row .offset-l-10 {margin-left: calc(100%/12 * 10);}
     .grid .row .offset-l-11 {margin-left: calc(100%/12 * 11);}
     .grid .row .offset-l-12 {margin-left: 100%;}
+}
+
+input {
+ font-size: 1rem;
+ padding: 0.7rem 0.5rem;
+}
+label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top:0.85rem;
+    margin-bottom: 0.25rem;
+}
+button {
+    display: inline-block;
+    font-size: 1rem;
+    padding: 0.85rem 1rem;
+    border-radius:7px;
+    border:1px solid #444;
+}
+button.primary {
+    background-color: #3632ab;
+    color:#fff;
+}
+button.secondary {
+    background-color: #b9881f;
+    color:#333;
+}
+/* Bootstrap like */
+.form_A input {
+    border: 1px solid #000;
+    border-radius: 7px;
+}
+.form_A input:focus {
+    outline-color: #159b00;
+}
+.form_A .pill {
+    border-radius: 27px;
+    box-shadow: 3px 3px 12px 4px #00000066;
+}
+/* Material Design Like */
+.form_B input {
+    border: none;
+    border-bottom: 1px solid #000;
+    background-color: transparent;
+}
+.form_B input:focus {
+    outline: none;
+    border-bottom-color: #159b00;
+}
+.form_B button {
+    box-shadow: 3px 3px 12px 4px #00000066;
+}
+
+.error input {
+    border-color: #e41c1c;
+}
+.error span {
+    padding: 0.25rem 0.5rem;
+    color: #e41c1c;
+}
+
+.cta_content {
+    display:flex;
+    gap:1rem;
+    justify-content: center;
+    margin-top:1rem;
+    margin-bottom: 1rem;
+}
+
+.form_B button.full-rounded {
+    position:fixed;
+    bottom: 1rem;
+    right:1rem;
+    display:inline-block;
+    width:64px;
+    height:64px;
+    border-radius: 50%;
+    font-size: 2rem;
+    background-color: #b9881f;
+    color:#333;
 }

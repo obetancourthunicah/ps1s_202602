@@ -160,6 +160,7 @@
             <section class="content grid">
                 <section class="row">
                     <div class="col-12 col-m-6">
+                        <h3>Form A</h3>
                         <form
                             action="introcss.html"
                             method="get"
@@ -167,30 +168,41 @@
                             id="form1"
                             novalidate
                         >
-                        <div>
-                            <label for="field_a_1">Campo 1</label>
+                        <div class="row">
+                            <label
+                                for="field_a_1"
+                                class="col-12 col-l-4"
+                            >Campo 1</label>
                             <input type="text"
                                    name="field_a_1"
                                    id="field_a_1"
                                    placeholder="Campo 1"
+                                   class="col-12 col-l-8"
                             />
                         </div>
-                        <div>
-                            <label for="field_a_2">Campo 2</label>
+                        <div class="row error">
+                            <label
+                                for="field_a_2"
+                                class="col-12 col-l-4"
+                            >Campo 2</label>
                             <input type="text"
                                    name="field_a_2"
                                    id="field_a_2"
                                    placeholder="Campo 2"
+                                   class="col-12 col-l-8"
                             />
-                            <span> Esto es un mensaje de error</span>
+                            <span class="col-12 col-l-8 offset-l-4">
+                                Esto es un mensaje de error
+                            </span>
                         </div>
-                        <div>
-                            <button class="primary">Confirmar</button>
-                            <button class="secondary">Cancelar</button>
+                        <div class="cta_content">
+                            <button class="pill primary">Confirmar</button>
+                            <button class="pill secondary">Cancelar</button>
                         </div>
                         </form>
                     </div>
                     <div class="col-12 col-m-6">
+                        <h3>Form B</h3>
                         <form
                             action="introcss.html"
                             method="get"
@@ -198,26 +210,37 @@
                             id="form2"
                             novalidate
                         >
-                        <div>
-                            <label for="field_b_1">Campo 1</label>
+                        <div class="row">
+                            <label
+                                for="field_b_1"
+                                class="col-12 col-l-4"
+                            >Campo 1</label>
                             <input type="text"
                                    name="field_b_1"
                                    id="field_b_1"
                                    placeholder="Campo 1"
+                                   class="col-12 col-l-8"
                             />
                         </div>
-                        <div>
-                            <label for="field_b_2">Campo 2</label>
+                        <div class="row error">
+                            <label
+                                for="field_b_2"
+                                class="col-12 col-l-4"
+                            >Campo 2</label>
                             <input type="text"
                                    name="field_b_2"
                                    id="field_b_2"
                                    placeholder="Campo 2"
+                                   class="col-12 col-l-8"
                             />
-                            <span> Esto es un mensaje de error</span>
+                            <span class="col-12 col-l-8 offset-l-4">
+                                Esto es un mensaje de error
+                            </span>
                         </div>
-                        <div>
+                        <div class="cta_content">
                             <button class="primary">Confirmar</button>
                             <button class="secondary">Cancelar</button>
+                            <button class="full-rounded">+</button>
                         </div>
                         </form>
                     </div>
