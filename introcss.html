@@ -13,19 +13,33 @@
         }
     </style>
     -->
+    <script src="js/carusel.js"></script>
+    <script src="js/main.js"></script>
+    <!-- <script>
+        alert("Invovado desde Bloque Script");
+    </script> -->
 </head>
 
 <body>
     <header>
+        <section class="hmb-button">
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
         <section class="brand-section">
+            <!-- onclick="alert(
+                'Invocado desde Atributo en HTML'
+            )"-->
             <img src="https://picsum.photos/id/4/72/72"
-                alt="brand-img" />
+                alt="brand-img"
+                />
             <h1>
                 Cascade Style Sheets
                 <span> Hoja de Estilos en Cascada</span>
             </h1>
         </section>
-        <nav>
+        <nav class="hidden">
             <ul>
                 <li><a href="">Hero Panel</a></li>
                 <li><a href="">Half Panel</a></li>
@@ -34,20 +48,56 @@
         </nav>
     </header>
     <main>
-        <section class="hero-panel">
-            <section class="hero-background">
-                <picture>
-                    <source srcset="https://picsum.photos/id/20/1300/720"
-                       media="(min-width:1025px)" />
-                    <source srcset="https://picsum.photos/id/20/1025/640"
-                       media="(min-width:700px)" />
-                    <img src="https://picsum.photos/id/20/480/480"
-                        alt="Hero Panel Main Picture" />
-                </picture>
-            </section>
-            <section class="hero-call-to-action q4">
-                <h2>Una muestra de un CTA</h2>
-                <a href="#" class="btn-cta">Crear Cuenta</a>
+        <section class="carusel">
+            <section class="carusel-trail">
+                <section class="hero-panel">
+                    <section class="hero-background">
+                        <picture>
+                            <source srcset="https://picsum.photos/id/20/1300/720"
+                            media="(min-width:1025px)" />
+                            <source srcset="https://picsum.photos/id/20/1025/640"
+                            media="(min-width:700px)" />
+                            <img src="https://picsum.photos/id/20/480/480"
+                                alt="Hero Panel Main Picture" />
+                        </picture>
+                    </section>
+                    <section class="hero-call-to-action q4">
+                        <h2>Una muestra de un CTA</h2>
+                        <a href="#" class="btn-cta">Crear Cuenta</a>
+                    </section>
+                </section>
+                <section class="hero-panel">
+                    <section class="hero-background">
+                        <picture>
+                            <source srcset="https://picsum.photos/id/21/1300/720"
+                            media="(min-width:1025px)" />
+                            <source srcset="https://picsum.photos/id/21/1025/640"
+                            media="(min-width:700px)" />
+                            <img src="https://picsum.photos/id/21/480/480"
+                                alt="Hero Panel Main Picture" />
+                        </picture>
+                    </section>
+                    <section class="hero-call-to-action q1">
+                        <h2>Una muestra de un CTA</h2>
+                        <a href="#" class="btn-cta">Crear Cuenta</a>
+                    </section>
+                </section>
+                <section class="hero-panel">
+                    <section class="hero-background">
+                        <picture>
+                            <source srcset="https://picsum.photos/id/22/1300/720"
+                            media="(min-width:1025px)" />
+                            <source srcset="https://picsum.photos/id/22/1025/640"
+                            media="(min-width:700px)" />
+                            <img src="https://picsum.photos/id/22/480/480"
+                                alt="Hero Panel Main Picture" />
+                        </picture>
+                    </section>
+                    <section class="hero-call-to-action">
+                        <h2>Una muestra de un CTA</h2>
+                        <a href="#" class="btn-cta">Crear Cuenta</a>
+                    </section>
+                </section>
             </section>
         </section>
         <section class="content">
@@ -280,7 +330,7 @@
     <footer>
         Copyright 2026 &copy; ICC SCJ UNICAH
     </footer>
-    <aside>
+    <aside class="hidden">
         <section class="bg-blocker">
             <div>
                 <div class="circle-loader">

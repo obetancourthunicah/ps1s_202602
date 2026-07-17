@@ -35,6 +35,35 @@ header {
     gap:0.75rem;
     align-items: center;
     padding: 0.25rem 1rem;
+    position: relative;
+}
+
+header .hmb-button {
+    position:absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:0.5rem;
+    cursor:pointer;
+}
+header .hmb-button div {
+    width: 3rem;
+    height:5px;
+    background-color: #eee;
+    border-radius: 3px;
+}
+@media (min-width:720px) {
+    header .hmb-button{
+        display: none;
+    }
+    header nav.hidden {
+        display:block;
+    }
 }
 
 header .brand-section {
@@ -185,6 +214,22 @@ Es el panel principal ubicado
     border-radius: 7px;
     box-shadow: 3px 3px 5px #000;
 }
+
+.carusel {
+    position: relative;
+    width:100vw;
+    height:80vh;
+    overflow-x: hidden;
+}
+.carusel .carusel-trail{
+    display:flex;
+    flex-direction: row;
+    transition: transform 1s ease;
+}
+.carusel .carusel-trail>section{
+    flex-shrink: 0;
+}
+
 
 @media (min-width:720px) {
     .hero-panel .hero-call-to-action.q1 {
@@ -467,4 +512,8 @@ button.secondary {
     100% {
         transform: rotate(360deg);
     }
+}
+
+.hidden {
+    display:none;
 }
