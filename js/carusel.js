@@ -10,6 +10,9 @@ class Carusel {
     btnRight = null;
     timeoutId = null;
     onProcess = false;
+    indexedButtons = null;
+    indexedButtonsItems = [];
+
 
     constructor( rootSelector, tickSecond = 3 ) {
         this.root = document.querySelector(rootSelector);
@@ -23,9 +26,44 @@ class Carusel {
             throw new Error("Mínimo son 3 elementos en carusel");
         }
         this.generateLateralsUX();
-
+        this.generateIndexedUX();
         this.intervalTime = tickSecond * 1000;
         this.tick();
+    }
+
+    generateIndexedUX(){
+        this.indexedButtons = document.createElement("DIV");
+        this.indexedButtons.classList.add("carusel-indexed-btns");
+
+        for ( let i = 0; i < this.slidesCount; i++) {
+            let btnIdx = document.createElement("DIV");
+            if ( i === 0) {
+                // 1 == "1"
+                // 1 === "1"
+                // 1 === 1
+                btnIdx.classList.add("current");
+            }
+            btnIdx.addEventListener("click", (e)=>{
+                e.preventDefault();
+                e.stopPropagation();
+                this.onProcess = true;
+                this.clearTimeout();
+                this.currentIndex = i;
+                this.moveSlide();
+            });
+            this.indexedButtons.appendChild(btnIdx);
+            this.indexedButtonsItems.push(btnIdx);
+        }
+        this.root.appendChild(this.indexedButtons);
+    }
+
+    updateCurrentIndexedBtn(){
+        this.indexedButtonsItems.forEach(
+            (o)=>{
+                o.classList.remove("current");
+            }
+        );
+        this.indexedButtonsItems[this.currentIndex].classList.add("current");
     }
 
     generateLateralsUX() {
@@ -92,6 +130,7 @@ class Carusel {
             this.currentIndex = this.currentIndex + (this.direction * 2);
         }
         this.trail.style.transform = `translateX(${(100*this.currentIndex*-1)}vw)`;
+        this.updateCurrentIndexedBtn();
         this.onProcess = false;
         this.tick();
     }

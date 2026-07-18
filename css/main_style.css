@@ -249,6 +249,30 @@ Es el panel principal ubicado
     right:0px;
 }
 
+.carusel .carusel-indexed-btns {
+    position: absolute;
+    display: flex;
+    bottom: 0px;
+    left:50%;
+    transform: translateX(-50%);
+    gap:0.7rem;
+    padding:1rem;
+}
+.carusel .carusel-indexed-btns div {
+    background-color: #fff;
+    border:1px solid #333;
+    width:13px;
+    height: 13px;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+}
+
+.carusel .carusel-indexed-btns div.current{
+    background-color: #444;
+    border-radius: 7px;
+    width: 52px;
+}
+
 
 @media (min-width:720px) {
     .hero-panel .hero-call-to-action.q1 {
