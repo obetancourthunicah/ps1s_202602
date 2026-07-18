@@ -229,6 +229,25 @@ Es el panel principal ubicado
 .carusel .carusel-trail>section{
     flex-shrink: 0;
 }
+.carusel .carusel-btn {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:1rem;
+    background-color: #fff;
+    color: #333;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    font-weight: bolder;
+}
+.carusel .carusel-btn.carusel-btn-left {
+    left:0px;
+}
+.carusel .carusel-btn.carusel-btn-right {
+    right:0px;
+}
 
 
 @media (min-width:720px) {

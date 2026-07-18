@@ -6,6 +6,11 @@ class Carusel {
     intervalTime = 0;
     currentIndex = 0;
     direction = 1;
+    btnLeft = null;
+    btnRight = null;
+    timeoutId = null;
+    onProcess = false;
+
     constructor( rootSelector, tickSecond = 3 ) {
         this.root = document.querySelector(rootSelector);
         if(!this.root) {
@@ -17,14 +22,63 @@ class Carusel {
         if (this.slidesCount < 3) {
             throw new Error("Mínimo son 3 elementos en carusel");
         }
-        console.log("Debug Data", {"root":this.root, "trail":this.trail, "slides": this.slidesCount});
+        this.generateLateralsUX();
+
         this.intervalTime = tickSecond * 1000;
         this.tick();
     }
 
+    generateLateralsUX() {
+        this.btnLeft = document.createElement("DIV");
+        this.btnRight = document.createElement("DIV");
+
+        this.btnLeft.innerHTML = "&lt;";
+        this.btnRight.innerHTML = "&gt";
+
+        this.btnLeft.classList.add(
+            "carusel-btn",
+            "carusel-btn-left"
+        );
+        this.btnRight.classList.add(
+            "carusel-btn",
+            "carusel-btn-right"
+        );
+        this.btnLeft.addEventListener("click", (e)=>{
+            e.preventDefault();
+            e.stopPropagation();
+            if(this.onProcess || this.currentIndex <= 0 ) {
+                return;
+            }
+            this.onProcess = true;
+            this.clearTimeout();
+            this.currentIndex--;
+            this.moveSlide();
+        });
+        this.btnRight.addEventListener("click", (e)=>{
+            e.preventDefault();
+            e.stopPropagation();
+            if(this.onProcess || this.currentIndex < this.slidesCount -1 ) {
+                return;
+            }
+            this.onProcess = true;
+            this.clearTimeout();
+            this.currentIndex++;
+            this.moveSlide();
+        });
+        this.root.appendChild(this.btnLeft);
+        this.root.appendChild(this.btnRight);
+    }
+
+    clearTimeout(){
+        if (this.timeoutId) {
+            clearTimeout(this.timeoutId);
+            this.timeoutId = null;
+        }
+    }
     tick(){
-        setTimeout(
+        this.timeoutId = setTimeout(
             (()=>{
+                this.onProcess=true;
                 this.currentIndex += this.direction;
                 this.moveSlide();
             }).bind(this)
@@ -38,6 +92,7 @@ class Carusel {
             this.currentIndex = this.currentIndex + (this.direction * 2);
         }
         this.trail.style.transform = `translateX(${(100*this.currentIndex*-1)}vw)`;
+        this.onProcess = false;
         this.tick();
     }
 }
