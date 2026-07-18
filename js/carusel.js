@@ -95,7 +95,7 @@ class Carusel {
         this.btnRight.addEventListener("click", (e)=>{
             e.preventDefault();
             e.stopPropagation();
-            if(this.onProcess || this.currentIndex < this.slidesCount -1 ) {
+            if(this.onProcess || this.currentIndex >= this.slidesCount ) {
                 return;
             }
             this.onProcess = true;
