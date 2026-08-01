@@ -111,6 +111,10 @@ const PlanICC_IF01004 = {
 class PlanDeEstudio {
     rootElement = null;
     planEstudioData = null;
+
+    selectedAsg = null;
+    asgStructure = {};
+
     constructor ( rootSelector, planEstudioData) {
         this.rootElement = document.querySelector(rootSelector);
         if (!this.rootElement) {
@@ -156,7 +160,49 @@ class PlanDeEstudio {
                 asigCrd.innerHTML = `Crd. ${asignaturaData.creditos}`;
                 asgUX.appendChild(asgTitulo);
                 asgUX.appendChild(asigCrd);
+                if(!this.asgStructure[asignaturaData.codigo]) {
+                    let requisitos = asignaturaData.requisito || [];
+                    this.asgStructure[asignaturaData.codigo] = {
+                        nodo : asgUX,
+                        reqs : requisitos,
+                        opns: []
+                    }
+                    requisitos.forEach((rq)=>{
+                        this.asgStructure[rq].opns.push(asignaturaData.codigo);
+                    });
+                }
                 bloqueAsignaturas.appendChild(asgUX);
+                // Ligar los Eventos
+                asgUX.addEventListener("click", (e)=>{
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log("Click Levantado", asignaturaData.codigo );
+                    if(this.selectedAsg){
+                        /*
+                            nodo:
+                            reqs:
+                            opns:
+                        */
+                       this.selectedAsg.nodo.classList.remove("selected");
+                       this.selectedAsg.reqs?.forEach((rq)=>{
+                        this.asgStructure[rq].nodo.classList.remove("requisito");
+                       });
+                       this.selectedAsg.opns?.forEach((op)=>{
+                        this.asgStructure[op].nodo.classList.remove("isopenned");
+                       });
+                    }
+                    // Asignar la nueva clase seleccionada
+                    this.selectedAsg = this.asgStructure[asignaturaData.codigo];
+                    console.log(this.selectedAsg);
+                    this.selectedAsg.nodo.classList.add("selected");
+                    this.selectedAsg.reqs?.forEach((rq)=>{
+                        this.asgStructure[rq].nodo.classList.add("requisito");
+                    });
+                    this.selectedAsg.opns?.forEach((op)=>{
+                        this.asgStructure[op].nodo.classList.add("isopenned");
+                    });
+                });
+                
             });
             bloqueUX.appendChild(bloqueLabel);
             bloqueUX.appendChild(bloqueAsignaturas);

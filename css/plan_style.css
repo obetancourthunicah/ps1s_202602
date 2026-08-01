@@ -63,3 +63,16 @@
         width:120px;
     }
 }
+
+.bloque .asignaturas .asignatura.selected .asg-credito {
+    background-color: #2f8905;
+    color:#fff;
+}
+.bloque .asignaturas .asignatura.requisito .asg-credito{
+    background-color: #7c5d02;
+    color:#fff;
+}
+.bloque .asignaturas .asignatura.isopenned .asg-credito {
+    background-color: #770589;
+    color:#fff;
+}
