@@ -1,0 +1,65 @@
+.plan {
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+    padding:1rem;
+}
+
+.bloque {
+    display:flex;
+    gap:0.5rem;
+    box-shadow: 3px 5px 7px 3px #000a;
+    padding:0.25rem;
+    align-items: center;
+}
+
+.bloque .label {
+    width: 4.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:1.5rem;
+    color:#333;
+}
+
+.bloque .asignaturas {
+    flex:1;
+    display: flex;
+    gap:1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.bloque .asignaturas .asignatura {
+    position:relative;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    box-shadow: 3px 3px 5px #777;
+    border: 1px solid #777;
+    width:100%;
+    min-height: 70px;
+    font-size: 0.75rem;
+}
+
+.bloque .asignaturas .asignatura .asg-credito {
+    text-align: center;
+    font-weight: bolder;
+    background-color: #052689;
+    color:#fff;
+    width:100%;
+    padding:0.05rem;
+}
+
+.bloque .asignaturas .asignatura .asg-titulo {
+    padding:0.25rem;
+    text-align: center;
+    flex:1;
+}
+
+
+@media (min-width:720px){
+    .bloque .asignaturas .asignatura  {
+        width:120px;
+    }
+}
