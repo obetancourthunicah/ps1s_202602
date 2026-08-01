@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan de Estudio</title>
+    <link rel="stylesheet" href="css/main_style.css" />
+    <link rel="stylesheet" href="css/plan_style.css" />
+    <script src="js/planEstudio.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", ()=>{
+            const planICC = new PlanDeEstudio("#planEstudioIcc", PlanICC_IF01004);
+        });
+    </script>
+</head>
+<body>
+     <header>
+        <section class="hmb-button">
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+        <section class="brand-section">
+            <!-- onclick="alert(
+                'Invocado desde Atributo en HTML'
+            )"-->
+            <img src="https://picsum.photos/id/4/72/72"
+                alt="brand-img"
+                />
+            <h1>
+                Cascade Style Sheets
+                <span> Hoja de Estilos en Cascada</span>
+            </h1>
+        </section>
+        <nav class="hidden">
+            <ul>
+                <li><a href="">Hero Panel</a></li>
+                <li><a href="">Half Panel</a></li>
+                <li><a href="">Cards List</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="planEstudioIcc">
+        </section>
+    </main>
+    <footer>
+        Copyright 2026 &copy; ICC SCJ UNICAH
+    </footer>
+</body>
+</html>
